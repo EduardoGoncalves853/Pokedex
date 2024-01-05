@@ -1,18 +1,16 @@
 import { Container } from "./styles";
+import { Outlet } from "react-router-dom";
 
 export function App() {
   return (
-    
-<Container>
-    <header>Header</header>
+    <Container>
+      <header>Header</header>
 
       <main>
-      <h1>App</h1>
+        <Outlet />
       </main>
 
-    <footer>footer</footer>
-
-</Container>
- 
+      <footer>footer</footer>
+    </Container>
   );
 }
