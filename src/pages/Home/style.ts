@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  min-height: 100vh;
+export const Container = styled.main`
 
   h1 {
     font-size: 1.4rem;
+    text-align: center;
+    color: lightgray;
+    margin-top: 0.8rem;
   }
 
   .gridCards {
@@ -17,15 +19,15 @@ export const Container = styled.div`
     flex-wrap: wrap;
   }
 
-  @media (min-width: 768) {
+  @media (min-width: 768px) {
     h1 {
       margin-top: 2.4rem;
       font-size: 2.8rem;
     }
 
     .gridCards {
-        margin-top: 4.2rem;
-        gap: 2.4rem;
+      margin-top: 4.2rem;
+      gap: 2.4rem;
     }
   }
 `;

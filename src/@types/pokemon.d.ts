@@ -1,5 +1,3 @@
-// pokemon types
-
 import { AppTheme } from "./styles";
 
 export type PokemonType = keyof AppTheme["colors"]["types"];

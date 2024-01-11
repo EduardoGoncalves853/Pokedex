@@ -1,9 +1,3 @@
-=> Reprograma Jucás <=
-https://emanuelquintino.github.io/Page-WDC/
-
-=> Pokemon Types <=
-
-
 
 => Vercel <=
 

@@ -18,7 +18,7 @@ export const Container = styled.div`
   }
 
   img {
-    filter:  drop-shadow(1px 1px 1px #000b);
+    filter: drop-shadow(1px 1px 1px #000b);
     width: 8rem;
   }
 
@@ -38,18 +38,18 @@ export const Container = styled.div`
     padding: 2.4rem;
     min-width: 22rem;
     min-height: 28rem;
-    
+
     img {
-        width: 16rem;
+      width: 16rem;
     }
-    
+
     strong {
-        font-size: 1.6rem;
+      font-size: 1.6rem;
     }
-    
+
     .boxTypes {
-        gap: 0.8rem;
-        margin-top: 1.2rem;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
     }
-}
+  }
 `;

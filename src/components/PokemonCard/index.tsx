@@ -9,10 +9,8 @@ type Props = {
 export function PokemonCard({ pokemon }: Props) {
   return (
     <Container>
-      <img
-        src={pokemon.sprites.other["official-artwork"].front_default}
-        alt=""
-      />
+      <img src={pokemon.sprites.other["official-artwork"].front_default} />
+
       <strong>
         #{pokemon.id} {pokemon.name}
       </strong>
