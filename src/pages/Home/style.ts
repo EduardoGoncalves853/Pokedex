@@ -35,7 +35,7 @@ export const Container = styled.main`
         background: lightgray;
       }
 
-      &:not(:disabled):hover{
+      &:not(:disabled):hover {
         filter: brightness(1.05);
       }
     }
@@ -49,6 +49,21 @@ export const Container = styled.main`
     justify-content: center;
     gap: 1.2rem;
     flex-wrap: wrap;
+  }
+    
+    .pagginationComponent {
+    width: 32rem;
+    margin: 3.2rem auto 0;
+
+    .boxNumberPage {
+      font-size: 1.6rem;
+      margin: 0.8rem 1.6rem;
+    }
+
+    button {
+      font-size: 1.6rem;
+      padding: 0.8rem 1.6rem;
+    }
   }
 
   @media (min-width: 768px) {
