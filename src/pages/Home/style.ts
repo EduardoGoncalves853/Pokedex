@@ -8,13 +8,23 @@ export const Container = styled.main`
     margin-top: 0.8rem;
   }
 
+  .gridCards {
+    min-height: 100vh;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
   .paginationComponent {
     width: 22rem;
     margin: 1.4rem auto 0;
     padding: 0.6rem 1.2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     .boxNumberPage {
       font-size: 1.2rem;
@@ -29,7 +39,7 @@ export const Container = styled.main`
       padding: 0.6rem 1.2rem;
       border-radius: 0.8rem;
       box-shadow: 1px 1px 2px 0px #0008;
-      text-shadow: 1px 1px 2px 0px #0004;
+      text-shadow: 1px 1px 2px #0004;
 
       &:disabled {
         background: lightgray;
@@ -38,31 +48,6 @@ export const Container = styled.main`
       &:not(:disabled):hover {
         filter: brightness(1.05);
       }
-    }
-  }
-
-  .gridCards {
-    min-height: 100vh;
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-    
-    .pagginationComponent {
-    width: 32rem;
-    margin: 3.2rem auto 0;
-
-    .boxNumberPage {
-      font-size: 1.6rem;
-      margin: 0.8rem 1.6rem;
-    }
-
-    button {
-      font-size: 1.6rem;
-      padding: 0.8rem 1.6rem;
     }
   }
 
@@ -75,6 +60,20 @@ export const Container = styled.main`
     .gridCards {
       margin-top: 4.2rem;
       gap: 2.4rem;
+    }
+
+    .paginationComponent {
+      width: 32rem;
+      margin: 3.2rem auto 0;
+
+      .boxNumberPage {
+        font-size: 1.8rem;
+      }
+
+      button {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.6rem;
+      }
     }
   }
 `;

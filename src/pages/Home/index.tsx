@@ -31,7 +31,7 @@ export function Home() {
         </button>
 
         <span className="boxNumberPage">
-          {String(page).padStart(2, "0")}/ {String(totalPages).padStart(2, "0")}
+          {String(page).padStart(2, "0")} / {String(totalPages).padStart(2, "0")}
         </span>
 
         <button onClick={nextPage} disabled={page >= totalPages}>

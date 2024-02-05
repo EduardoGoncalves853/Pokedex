@@ -5,20 +5,21 @@ import { useEffect } from "react";
 
 export function Details() {
   const { name } = useParams();
+
   const { data, isLoading, error } = useQueryPokemonDetails(name!);
+
   const navigate = useNavigate();
 
   if (error) console.error(error);
 
-  //* sistema para quando clicar em um pokemon, a pagina volta para o top
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
 
   return (
     <Container>
-      {isLoading && <span className="feedbackLoading">Loading..</span>}
-      {!isLoading && error && <span className="feedbackLoading">Error..</span>}
+      {isLoading && <span className="feedbackLoading">Loading...</span>}
+      {!isLoading && error && <span className="feedbackLoading">Error...</span>}
 
       {data && (
         <div className="boxDetails">

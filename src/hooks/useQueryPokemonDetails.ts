@@ -12,6 +12,6 @@ export function useQueryPokemonDetails(name: string) {
     queryKey: [`getPokemon${name}`, name],
     queryFn: () => getPokemon(name),
   });
-  
+
   return query;
 }

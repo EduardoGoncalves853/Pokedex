@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors.primary};
-  padding: 2.4rem;
+  padding: 2.4rem 3.2rem;
   width: 100%;
   text-align: center;
   font-weight: 700;
@@ -13,7 +13,7 @@ export const Container = styled.div`
     font-size: 1.2rem;
     border-radius: 0.8rem;
     padding: 1.2rem;
-    background: #eeee;
+    background: #eee2; /* # eee2 */
     display: block;
     color: ${({ theme }) => theme.colors.light};
     text-align: center;
@@ -24,7 +24,7 @@ export const Container = styled.div`
 
     a {
       font-size: 2.4rem;
-      padding: 1.2rem;
+      padding: 3.2rem;
     }
   }
 `;

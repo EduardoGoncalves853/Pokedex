@@ -6,7 +6,6 @@ export function Footer() {
       <a href="https://emanuelquintino.github.io/Page-WDC/" target="_blank">
         Reprograma Jucás
       </a>
-
     </Container>
   );
 }
