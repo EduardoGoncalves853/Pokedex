@@ -4,11 +4,10 @@ import { Pokemon } from "../@types/pokemon";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-
 export function useQueryPokemonPage() {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(30);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   const navigate = useNavigate();
   const searchParams = useSearchParams();
@@ -50,9 +49,24 @@ export function useQueryPokemonPage() {
   useEffect(() => {
     const pageQuery = Number(searchParams[0].get("page"));
 
-    setPage(pageQuery || 1)
-  }, [searchParams]);
+    setPage(pageQuery || 1);
 
+    // caso o pageQuery for maior que total pages (44) (ex: 45, 50, 100)
+    if (totalPages > 0) {
+      if (pageQuery > totalPages) {
+        navigate(`?page=${totalPages}`);
+        setPage(totalPages);
+        return;
+      }
+      // caso o pageQuery for menor que 1 (ex: 0, -1, -2)
+      if (pageQuery < 1) {
+        navigate(`?page=1`);
+        setPage(1);
+        return;
+      }
+    }
+  }, [searchParams, page, totalPages, navigate]);
+  // query = (requisição)
   const query = useQuery({
     queryKey: ["getPokemonPage", page, limit],
     queryFn: () => getPokemonPage({ page, limit }),
